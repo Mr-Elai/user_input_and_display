@@ -22,10 +22,20 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       appBar: AppBar(title: Text('Home Page')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+
+          Center(
+            child: Image(
+              height: 100.0,
+              image: AssetImage('images/zuri.jpeg'),
+            ),
+          ),
+
+          Text('internship.zuri.team'),
 
           Padding(
             padding: const EdgeInsets.all(32.0),
@@ -75,7 +85,9 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Display Page')),
-      body: Center(
+      body:
+
+      Center(
         child: Text(
           text,
           style: TextStyle(fontSize: 24),
